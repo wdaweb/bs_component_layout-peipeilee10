@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Parisienne&display=swap"
+    rel="stylesheet">
+  <title>Bootstrap component layout</title>
+
+  <style>
+    .bg-lightgrey {
+      background-color: #F0F0F0;
+    }
+
+    #wdaCafeCarousel .carousel-item {
+      height: auto !important;
+      object-fit: cover;
+    }
+
+
+    @media(min-width:576px) {
+      #wdacafe {
+        height: calc(40vh+10vw);
+      }
+
+      #wdaCafeCarousel .carousel {
+        height: 100%;
+      }
+
+      #wdaCafeCarousel .carousel-inner {
+        height: 100%;
+      }
+
+      #wdaCafeCarousel .carousel-item {
+        height: 100%;
+      }
+
+      #wdaCafeCarousel .carousel-item img {
+        height: 100%;
+      }
+    }
+
+    @media(min-width:1200px) {
+      #wdacafe {
+        height: 100vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 導覽列 -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> 泰山咖啡莊園</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hamburger">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- 漢堡按鈕折疊裡的內容 -->
+      <div class="collapse navbar-collapse" id="hamburger">
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#section01">菜單餐點</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section02">周邊景點</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section03">莊園位置</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section04">聯絡我們</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section05">咖啡故事</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 輪播圖 -->
+  <div id="wdacafe ">
+    <div id="wdaCafeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="100000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#wdaCafeCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#wdaCafeCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#wdaCafeCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <!-- 輪播內容 -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/id/529/1920/1080" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/id/635/1920/1080" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/id/71/1920/1080" class="d-block w-100">
+        </div>
+      </div>
+      <!-- 前後按鈕 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#wdaCafeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#wdaCafeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 卡片區 -->
+  <div class="d-flex justify-content-center">
+    <div class="row m-5">
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card" style="width:400px; height: 550px;">
+          <img class="card-img-top" src="https://picsum.photos/id/164/400/300">
+          <div class="card-body">
+            <h4 class="card-title">到泰山咖啡莊園偽出國</h4>
+            <p class="card-text">
+              隱藏於泰山深山的咖啡廳，主打不限時、擁有歐式戶外坐位區的複合式咖啡廳，一開幕就創造了超高人氣!從磁磚、桌椅、到整體環境都打造的非常精巧，尤其是戶外的座位區完全讓人身處在巴黎街頭的感覺，來到泰山咖啡莊園千萬別錯過這個拍照點!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card" style="width:400px; height: 550px;">
+          <img class="card-img-top" src="https://picsum.photos/id/1060/400/300">
+          <div class="card-body">
+            <h4 class="card-title">咖啡講座</h4>
+            <p class="card-text">
+              如果你對於咖啡的調理方式有興趣，我們的咖啡大師將會為你示範最佳的咖啡製作方式，並協助你選擇最適合餐後享用的咖啡與搭配的甜點；或是建議您嘗試新的咖啡調製方式，創造更多生活中的咖啡樂趣。當然，我們也會不定期舉辦咖啡講座，與喜愛咖啡的你一起分享專業的咖啡知識，彼此交流，讓你更認識我們的咖啡。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card" style="width:400px; height: 550px;">
+          <img class="card-img-top" src="https://picsum.photos/id/425/400/300">
+          <div class="card-body">
+            <h4 class="card-title">嚴選咖啡豆</h4>
+            <p class="card-text">
+              從原產地的一株咖啡樹，最終成為您手中的一杯咖啡；我們堅持採購並且烘焙最高品質的咖啡，這是我們一直努力的基本原則；最初的十英呎到最後十英呎的珍貴體驗，咖啡的故事做了最佳的註解，同時也塑造出咖啡家族的獨特風味及口感特性，閱讀咖啡的故事，可以讓您更瞭解咖啡，豐富您的咖啡體驗。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 介紹區 -->
+  <div class="bg-lightgrey container-fluid">
+    <div class="row ">
+      <div class="col-12 col-md-6 p-0 ">
+        <img class="img-fluid w-100" src="https://picsum.photos/id/766/800/500">
+      </div>
+      <div class="col-12 col-md-6 text-center align-self-center ">
+        <h1 class="mb-5 fw-light">有高品質的咖啡豆，才有好咖啡</h1>
+        <p class="mb-5">
+          在台灣，喝咖啡已經是不可或缺的享受，越來越多人選擇自己在家裡沖咖啡，不只為興趣，也為了更好的咖啡品質。如果你已經，或者正打算要這麼做，那麼第一件你必須要知道的事情就是:好咖啡，來自高品質的咖啡豆。
+          這道理就跟大部份的食物一樣。一條不新鮮的魚，用再怎樣華麗的方式料理，也一定不怎麼好吃，但一條新鮮的魚，加點薑清蒸就非常好吃。咖啡也是一樣，品質不好的咖啡豆，再好的沖泡技巧或器具也救不回來，註定只能煮出不好喝的咖啡。
+          那麼，什麼是高品質的咖啡豆呢？回想一下你過去曾喝過覺得好喝的咖啡，大概都有兩個特徵，第一是香氣迷人，第二是味道好。不同品種咖啡豆的味道都不一樣，個人喜好當然也見仁見智，但所謂高品質的咖啡豆，就是要能盡可能地保留咖啡的香氣和味道，在最後沖泡時完整散發出來。
+        </p>
+        <button type="button" class="btn btn-success text-white p-3 border border-success border-3 mb-3">VIEW
+          COLLECTION</button>
+      </div>
+    </div>
+    <div class="row flex-row-reverse">
+      <div class="col-12 col-md-6 p-0">
+        <img class="img-fluid w-100" src="https://picsum.photos/id/113/800/500">
+      </div>
+      <div class="col-12 col-md-6 text-center p-3 align-self-center ">
+        <h1 class="mb-5 fw-light">美好的一天　從一杯咖啡開始</h1>
+        <p class="mb-5">
+          單醇Ｘ濃烈，純粹的好喝! 現磨的咖啡豆高壓萃取， 釋出咖啡特有的苦與甘，同時大力衝擊味蕾， 一口嚐出100%雨林聯盟認證的， 阿拉比卡咖啡豆所富含的油脂與香氣。 一口喝出100%專業，一口喚醒100%好精神！
+
+        </p>
+        <button type="button" class="btn btn-success text-white p-3 border border-success border-3">VIEW
+          COLLECTION</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 地圖 -->
+  <div class="vh-100">
+    <iframe class="w-100 h-100"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.703649799049!2d121.41732691500657!3d25.04412928396768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1639216069151!5m2!1szh-TW!2stw"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <!-- 表單 -->
+  <div class="w-100 bg-lightgrey">
+  <div class="container ">
+      <div class="text-center py-3">
+        <h1 class="fw-light">聯絡我們</h1>
+        <h3 class="fw-light">泰山咖啡莊園，傳承熱情coding精神</h3>
+        <p>任何服務問題或建議，歡迎您透過客服表單告知我們，謝謝!</p>
+      </div>
+      <form class="row mx-5">
+        <div class="col-12 col-md-6">
+          <label for="name" class="form-lable">姓名</label>
+          <div class="input-group">
+            <input type="text" id="name" class="form-control">
+            <div class="input-group-text">
+              先生<input type="radio" name="gentle" class="form-check-input me-1">
+              女士<input type="radio" name="gentle" class="form-check-input mx-1">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="phone" class="form-lable">電話</label>
+          <input type="text" id="phone" class="form-control">
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="mail" class="form-lable">電子信箱</label>
+          <input type="text" id="mail" class="form-control">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="name" class="form-lable">問題類型</label>
+          <select class="form-select">
+            <option selected>餐飲建議</option>
+            <option value="1">商業合作</option>
+            <option value="2">環境衛生</option>
+            <option value="3">其他問題</option>
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="opinion" class="form-lable">意見需求</label>
+          <textarea id="opinion" class="form-control" rows="5"></textarea>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="subscribe">
+            <label class="form-check-label" for="subscribe">訂閱泰山莊園最新資訊</label>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center my-3">
+          <button type="button" class="text-white btn btn-secondary mb-3">送出</button>
+        </div>
+
+      </form>
+  </div>
+</div>
+
+  <!-- footer -->
+  <div class="bg-dark p-4">
+    <div class="row text-white w-75 m-auto">
+      <div class="col-6 col-md-3 p-4">
+        <img class="rounded-circle" src="https://picsum.photos/id/1025/150/150">
+      </div>
+      <div class="col-6 col-md-3 p-4">
+        <p class="fw-bold">Address</p>
+        <p class="fw-lighter">1234 Street Name<br> City,AA 9999</p>
+      </div>
+      <div class="col-6 col-md-3 p-4">
+        <p class="fw-bold">links</p>
+        <a href="#" class="text-decoration-none text-white d-block fw-lighter">Website</a>
+        <a href="#" class="text-decoration-none text-white d-block fw-lighter">Download for Windows</a>
+        <a href="#" class="text-decoration-none text-white d-block fw-lighter">Download for Mac</a>
+      </div>
+      <div class="col-6 col-md-3 p-4">
+        <p class="fw-bold">Contacts</p>
+        <p class="fw-lighter">Email:support@mobirise.com</p>
+        <p class="fw-lighter">Phone:+886 12345678</p>
+        <p class="fw-lighter">Fax:+886 87654321</p>
+      </div>
+    </div>
+    <p class="text-white text-center">&copy; Copyright 2021 PeiChun - All Rights Reserved</p>
+  </div>
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
